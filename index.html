@@ -20,7 +20,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <!-- !Google Fonts -->
-
+<!-- !Telegram -->
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <!-- Styles -->
 <link type="text/css" rel="stylesheet" href="css/plugins.css" />
 <link type="text/css" rel="stylesheet" href="css/style.css?ver=1.1" />
@@ -189,7 +190,7 @@
 			<div class="hero_content">
 				<div class="container">
 					<div class="content">
-						<h2 class="fn_title" title="Neoh">Neoh</h2>
+						<h2 class="fn_title" title="Neoh" id="username"></h2>
 						<p class="fn_desc fn_animated_text">The collection built by and runby ‘frenify’. Together we are strong than ever.</p>
 					</div>
 				</div>
@@ -198,7 +199,11 @@
 					<span class="icon"><img src="svg/right-arr.svg" alt="" class="fn__svg"></span>
 				</a>
 			</div>
-			
+			<script>
+				let tg = window.Telegram.WebApp;
+				let usernameDiv = document.getElementById("username");
+				usernameDiv.innerText = `${tg.initDataUnsafe.user.first_name}`
+			</script>
 				
 			
 		</div>
