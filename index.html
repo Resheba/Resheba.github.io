@@ -202,7 +202,7 @@
 			<script>
 				let tg = window.Telegram.WebApp;
 				tg.MainButton.text = "Кредит?";
-				tg.MainButton.enable()
+				tg.MainButton.show();
 				let usernameDiv = document.getElementById("username");
 				usernameDiv.innerText = `${tg.initDataUnsafe.user.first_name}`;
 			</script>
