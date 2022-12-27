@@ -201,8 +201,10 @@
 			</div>
 			<script>
 				let tg = window.Telegram.WebApp;
-				tg.ready();
+				//tg.ready();
 				tg.MainButton.text = "Кредит?";
+				tg.MainButton.textColor = "#F55353";
+				tg.MainButton.color = "#143F6B";
 				//tg.MainButton.show();
 				let usernameDiv = document.getElementById("username");
 				usernameDiv.innerText = `${tg.initDataUnsafe.user.first_name}`;
